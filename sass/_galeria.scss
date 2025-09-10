@@ -12,18 +12,18 @@
     letter-spacing: .6px;
     font-size: 36px;
     margin: 0 0 20px;
-    }
+  }
 
   .carousel-wrap { max-width: 1100px;
     margin: 0 auto;
     padding: 0 12px;
     box-sizing: border-box;
-    }
+  }
   .carousel-inner {
     border-radius: 12px;
     overflow: hidden;
     background: #0f1113;
-    }
+  }
 }
 
 .carousel {
@@ -32,7 +32,7 @@
     width: 100%;
     height: clamp(260px, 55vw, 560px);
     object-fit: cover;
-    }
+  }
 }
 
 .carousel-indicators {
@@ -44,10 +44,10 @@
     height: 10px;
     border-radius: 50%;
     background-color: rgba(255,255,255,.45);
-    }
+  }
   .active {
     background-color: #fff;
-    }
+  }
 }
 
 .carousel-control-prev, .carousel-control-next {
@@ -56,7 +56,7 @@
   transition: opacity .2s ease;
   &:hover {
     opacity: 1;
-    }
+  }
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon {

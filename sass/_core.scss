@@ -78,9 +78,13 @@ footer {
 
     a {
       color: #aaa;
-      &:hover { color: #fff; }
+      &:hover {
+        color: #fff;
+      }
     }
   }
 
-  p { opacity: .9; }
+  p {
+    opacity: .9;
+  }
 }
