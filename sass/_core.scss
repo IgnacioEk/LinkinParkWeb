@@ -1,0 +1,76 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+* {
+    box-sizing: border-box; margin: 0; padding: 0;
+}
+html, body { 
+    overflow-x: hidden;
+}
+
+body {
+  font-family: $font-base;
+  background: $color-bg;
+  color: $color-text;
+}
+
+.contenedor {
+    @include container;
+}
+
+.header {
+  background: $header-bg;
+  padding: 10px 0;
+  position: relative;
+  z-index: $z-header;
+
+  .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 48px;
+    }
+
+  .navbar-nav {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+
+    .nav-link {
+      color: $color-muted;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-text;
+        }
+    }
+  }
+}
+
+footer {
+  background: $footer-bg;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+
+    a {
+      color: #aaa;
+      &:hover {
+        color: #fff;
+        }
+    }
+  }
+
+  p {
+    opacity: .9;
+    }
+}

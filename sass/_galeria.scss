@@ -1,0 +1,64 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.galeria {
+  padding: 56px 0 64px;
+  color: $color-text;
+
+  .galeria-titulo {
+    text-align: center;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    font-size: 36px;
+    margin: 0 0 20px;
+    }
+
+  .carousel-wrap { max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 12px;
+    box-sizing: border-box;
+    }
+  .carousel-inner {
+    border-radius: 12px;
+    overflow: hidden;
+    background: #0f1113;
+    }
+}
+
+.carousel {
+  .carousel-item img {
+    display: block;
+    width: 100%;
+    height: clamp(260px, 55vw, 560px);
+    object-fit: cover;
+    }
+}
+
+.carousel-indicators {
+  gap: 8px;
+  margin-bottom: 10px;
+
+  [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,.45);
+    }
+  .active {
+    background-color: #fff;
+    }
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 56px;
+  opacity: .9;
+  transition: opacity .2s ease;
+  &:hover {
+    opacity: 1;
+    }
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.6));
+}

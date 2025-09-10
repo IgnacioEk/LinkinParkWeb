@@ -1,0 +1,63 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@keyframes scale-up-center {
+  0%   {
+    transform: scale(.88);
+    opacity: .001;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 48px 0;
+  min-height: 600px;
+
+  .hero-texto {
+    width: 50%;
+    padding-top: 40px;
+
+    h1 {
+      margin: 0 0 20px;
+      line-height: .9;
+    }
+    .claro {
+      color: $color-text;
+      font-size: 100px;
+    }
+    .rojo  { color: $color-accent;
+      font-size: 90px;
+    }
+
+    p {
+      margin-top: 25px;
+      line-height: 1.85;
+      font-size: 18px;
+    }
+  }
+
+  .hero-img {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    img {
+      max-width: 110%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      transform-origin: center center;
+      will-change: transform, opacity;
+      backface-visibility: hidden;
+      animation: scale-up-center .6s cubic-bezier(.39,.575,.565,1) both;
+      animation-delay: .15s;
+    }
+  }
+}

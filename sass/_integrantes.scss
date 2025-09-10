@@ -1,0 +1,71 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@keyframes scale-up-hover {
+  0%   {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
+
+.integrantes {
+  padding: 60px 0;
+
+  .contenedor {
+    @include container; text-align: center;
+  }
+
+  .titulo-seccion {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    margin-bottom: 40px;
+  }
+
+  .grid-integrantes {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 60px 70px;
+    justify-items: center;
+    align-items: start;
+    width: 100%;
+  }
+
+  .integrante {
+    text-align: center;
+    min-width: 0;
+
+    img {
+      width: 240px;
+      height: 240px;
+      display: block;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #222121;
+      box-sizing: border-box;
+      transform: scale(1);
+      will-change: transform;
+      transition: transform .25s cubic-bezier(.39,.575,.565,1);
+    }
+
+    img:hover,
+    img:focus {
+      animation: scale-up-hover .35s cubic-bezier(.39,.575,.565,1) both;
+      transform: scale(1.08);
+      box-shadow: 0 0 0 1px rgba(179,18,23,.35), 0 0 18px rgba(179,18,23,.45);
+    }
+
+    h5 {
+      margin-top: 16px;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: .5px;
+      word-break: break-word;
+    }
+  }
+}
+

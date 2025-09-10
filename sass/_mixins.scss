@@ -1,0 +1,26 @@
+@use 'variables' as *;
+
+@mixin container {
+  max-width: $max-w;
+  margin: 0 auto;
+  padding: 0 $gutter;
+  width: 100%;
+}
+
+@mixin btn-reset {
+  border: 1px solid transparent;
+  display: inline-block;
+  text-decoration: none;
+  user-select: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+@mixin grayscale-hover($dur: .4s) {
+  filter: grayscale(100%);
+  transition: filter $dur ease;
+
+  &:hover {
+    filter: grayscale(0%);
+    }
+}

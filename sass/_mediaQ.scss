@@ -1,0 +1,189 @@
+@media (max-width: 768px) {
+  .contacto {
+    padding: 28px 0 40px;
+    .contenedor-form {
+        max-width: 100%;
+        padding: 0 8px;
+    }
+    .form-control {
+        padding: 20px 14px;
+    }
+    .mb-3 {
+        margin-bottom: 14px;
+    }
+    .btn-danger {
+        width: 100%;
+    }
+    }
+    .discografia {
+    padding: 36px 0;
+    .discografia-titulo { font-size: 28px;
+        margin-bottom: 18px;
+    }
+    .discografia-contenedor {
+        gap: 18px;
+        justify-content: center;
+    }
+
+    .disco {
+      flex: 0 0 calc(50% - 18px);
+      max-width: calc(50% - 18px);
+      img {
+        width: 100%;
+        height: auto;
+        max-width: 180px;
+        margin: 0 auto;
+    }
+      .disco-nombre {
+        font-size: 12px;
+    }
+    }
+    }
+    .galeria {
+    padding: 36px 0 44px;
+    .galeria-titulo {
+        font-size: 26px;
+        margin-bottom: 14px;
+    }
+    .carousel-wrap {
+        padding: 0 8px;
+    }
+    }
+  .carousel .carousel-item img {
+    height: clamp(180px, 60vw, 360px);
+    }
+  .carousel-indicators [data-bs-target] {
+    width: 8px; height: 8px;
+    }
+.hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    min-height: auto;
+    text-align: center;
+
+    .hero-texto {
+      width: 100%;
+      padding-top: 20px;
+
+      .claro {
+        font-size: 70px;
+    }
+      .rojo  {
+        font-size: 65px;
+    }
+
+      p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    }
+
+    .hero-img {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+
+      img {
+        max-width:100%;
+        }
+    }
+  }
+  .integrantes {
+    .titulo-seccion {
+        font-size: 32px; 
+        margin-bottom: 24px; 
+    }
+    .grid-integrantes {
+        grid-template-columns: 1fr; 
+        gap: 24px; 
+    }
+
+    .integrante {
+      img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+      h5 {
+        font-size: 16px;
+    }
+    }
+  }
+  .tour {
+    padding: 34px 0 46px;
+
+    .tour-titulo {
+        .linea1 { font-size: 22px;
+        } 
+        .linea2 {
+            font-size: 26px; 
+        } 
+    }
+    .tour-lista {
+        gap: 10px;
+    }
+
+    .tour-item {
+      padding: 14px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto auto;
+      gap: 10px 12px;
+      align-items: start;
+    
+    }
+
+    .tour-info {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .tour-acciones {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        display: grid; gap: 8px;
+        justify-items: end;
+        align-content: start;
+    }
+    .tour-btn {
+        padding: 7px 12px;
+        font-size: 12px;
+        text-align: center;
+        min-width: 86px; 
+    }
+    }
+}
+
+@media (min-width: 769px) {
+  .tour {
+    .tour-lista {
+        max-width: 1160px;
+    }
+    .tour-item {
+        padding: 22px 24px;
+        min-height: 68px;
+    }
+    .tour-ciudad {
+        font-size: 18px;
+        letter-spacing: .8px;
+    }
+    .tour-fecha  {
+        font-size: 13px;
+    }
+    .tour-btn    {
+        padding: 8px 12px;
+        font-size: 13px;
+        border-radius: 8px;
+    }
+    .tour-titulo {
+    .linea1 {
+        font-size: 30px;
+    }
+    .linea2 {
+        font-size: 36px;
+    }
+    }
+  }
+}

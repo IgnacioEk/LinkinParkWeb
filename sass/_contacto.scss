@@ -1,0 +1,61 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.contacto {
+  color: $color-text;
+  padding: 56px 0 64px;
+
+  .contenedor-form {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 $gutter;
+    box-sizing: border-box;
+    }
+
+  .contacto-titulo {
+    text-align: center;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    font-size: 36px;
+    margin: 0 0 22px;
+  }
+
+  .form-label {
+    font-weight: 700;
+    letter-spacing: .3px;
+    margin-bottom: 6px;
+    }
+
+  .form-control {
+    background: #17191c;
+    color: #fff;
+    border: 1px solid #3a3f45;
+
+    &::placeholder {
+        color: #9aa2aa;
+    }
+
+    &:focus {
+      background: #1e2328;
+      color: #fff;
+      border-color: #c54646;
+      box-shadow: 0 0 0 .2rem rgba(197,70,70,.25);
+    }
+  }
+
+  .btn-danger {
+    background: #b13a3a;
+    border-color: #c34949;
+    font-weight: 700;
+    letter-spacing: .3px;
+    &:hover {
+        background: #c54646;
+        border-color: #d15353;
+    }
+  }
+
+  .mb-3 {
+    margin-bottom: 16px !important;
+}
+}
