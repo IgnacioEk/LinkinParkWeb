@@ -2,20 +2,35 @@
 @use 'mixins' as *;
 
 * {
-    box-sizing: border-box; margin: 0; padding: 0;
-}
-html, body { 
-    overflow-x: hidden;
+  box-sizing: border-box;
+  margin: 0; padding: 0;
 }
 
-body {
+html, body {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body,
+body.bg-dark {
   font-family: $font-base;
-  background: $color-bg;
+  background: $color-bg !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   color: $color-text;
 }
 
+.integrantes,
+.tour,
+.discografia,
+.galeria,
+.contacto {
+  background: transparent;
+}
+
 .contenedor {
-    @include container;
+  @include container;
 }
 
 .header {
@@ -32,7 +47,7 @@ body {
 
   .logo img {
     height: 48px;
-    }
+  }
 
   .navbar-nav {
     display: flex;
@@ -45,11 +60,10 @@ body {
 
       &:hover {
         color: $color-text;
-        }
+      }
     }
   }
 }
-
 footer {
   background: $footer-bg;
   text-align: center;
@@ -64,13 +78,9 @@ footer {
 
     a {
       color: #aaa;
-      &:hover {
-        color: #fff;
-        }
+      &:hover { color: #fff; }
     }
   }
 
-  p {
-    opacity: .9;
-    }
+  p { opacity: .9; }
 }

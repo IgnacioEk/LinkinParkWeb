@@ -5,13 +5,26 @@
 }
 
 html, body {
+  min-height: 100%;
   overflow-x: hidden;
 }
 
-body {
+body,
+body.bg-dark {
   font-family: "Montserrat", sans-serif;
-  background: linear-gradient(135deg, #0f0f0f 0%, #1a1d1f 40%, #6d0d10 100%);
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1d1f 40%, #6d0d10 100%) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   color: #fff;
+}
+
+.integrantes,
+.tour,
+.discografia,
+.galeria,
+.contacto {
+  background: transparent;
 }
 
 .contenedor {
