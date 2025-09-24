@@ -329,7 +329,6 @@ footer p {
   text-align: center;
 }
 .discografia .disco::after {
-  content: "";
   position: absolute;
   inset: -8px;
   border: 2px solid #78050b;
@@ -476,7 +475,7 @@ footer p {
   margin-bottom: 16px !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .contacto {
     padding: 28px 0 40px;
   }
@@ -617,6 +616,56 @@ footer p {
     font-size: 12px;
     text-align: center;
     min-width: 86px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .integrantes .grid-integrantes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    justify-items: center;
+  }
+  .integrantes .integrante img {
+    width: 250px;
+    height: 250px;
+  }
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 40px 0 28px;
+    min-height: auto;
+  }
+  .hero .hero-texto {
+    order: 1;
+    width: 100%;
+    padding-top: 0;
+  }
+  .hero .hero-texto h1 {
+    margin: 0 0 10px;
+    line-height: 0.95;
+  }
+  .hero .hero-texto .claro {
+    font-size: clamp(64px, 9vw, 84px);
+  }
+  .hero .hero-texto .rojo {
+    font-size: clamp(56px, 8vw, 76px);
+  }
+  .hero .hero-texto p {
+    max-width: 720px;
+    margin: 12px auto 0;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  .hero .hero-img {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    margin-top: 12px;
+  }
+  .hero .hero-img img {
+    max-width: 86%;
+    height: auto;
   }
 }
 @media (min-width: 769px) {
